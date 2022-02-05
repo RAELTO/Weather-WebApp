@@ -6,7 +6,7 @@ const axios = require('axios');//import axios - allow us to make requests
 exports.homeRoutes = (req, res) => {
     //Make a get request to /api/data JUST ONE REQUEST
 
-    axios.get('http://localhost:3000/api/history')
+    axios.get('/api/history')
         .then( (response) => {
             console.log(response.data);
             res.render('index', {history: response.data});
