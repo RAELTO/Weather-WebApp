@@ -1,0 +1,144 @@
+<!--include header-->
+<%-include('include/_header') %>
+<!--/include header-->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <br/>
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a class="border-btn" id="open-history">
+                    <span>Search history <i class="fas fa-history"></i></span>
+                </a>
+            </div>
+            <input type="checkbox" id="btn-modalH">
+            <div class="container-modalH">
+                <div class="content-modal">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Searched Place</th>
+                                <th>Search Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% let counter = 0; %>
+                            <% for (let i = history.length - 1; i >= 0; i--) { %>
+                                <% counter++; %>
+                                <tr>
+                                    <td><%= counter %></td>
+                                    <td><%= history[i].place %></td>
+                                    <td><%= history[i].date %></td>
+                                </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                    <div class="btn-cerrarH">
+                        <label for="btn-modalH" class="button-modal">close</label>
+                    </div>
+                </div>
+                <label for="btn-modalH" class="close-modal"></label>
+            </div>
+            <div class="post">
+                <div class="col">
+                    <section>
+                        <div class="box">
+                            <div class="square" style="--i:0;"></div>
+                            <div class="square" style="--i:0.1;"></div>
+                            <div class="square" style="--i:0.2;"></div>
+                            <div class="square" style="--i:1;"></div>
+                            <div class="square" style="--i:1.1;"></div>
+                            <div class="square" style="--i:1.2;"></div>
+                            <div class="square" style="--i:2;"></div>
+                            <div class="square" style="--i:2.1;"></div>
+                            <div class="square" style="--i:2.2;"></div>
+                            <div class="square" style="--i:3;"></div>
+                            <div class="square" style="--i:3.1;"></div>
+                            <div class="square" style="--i:3.2;"></div>
+                            <div class="square" style="--i:4;"></div>
+                            <div class="square" style="--i:4.1;"></div>
+                            <div class="square" style="--i:4.2;"></div>
+                            <div class="containerP">
+                                <div class="form">
+                                    <h2 class="panel-title">Main App</h2>
+                                    <form id="search_data">
+                                        <div class="inputBox">
+                                            <i class="fas fa-search"> Search:</i>
+                                            <input type="text" id="search_box" value="" placeholder="" autocomplete="off" required />
+                                            <div class="inputBox">
+                                                <input type="button" value="Search" id="open-modal">
+                                                <input type="button" value="Clear" id="clear">
+                                            </div>
+                                            <input type="checkbox" id="btn-modal">
+                                            <div class="container-modal">
+                                                <div class="content-modal">
+                                                    <h2>Options</h2>
+                                                    <p>Choose an option</p><br/>
+                                                    <form class="form-group">
+                                                        <div class="radio">
+                                                            <input type="radio" id="opt1" name="plc" value="">
+                                                            <label for="opt1" class="radio-label" id="place1"></label>
+                                                        </div><br/>
+                                                        <div class="radio">
+                                                            <input type="radio" id="opt2" name="plc"  value="">
+                                                            <label for="opt2" class="radio-label" id="place2"></label>
+                                                        </div><br/>
+                                                        <div class="radio">
+                                                            <input type="radio" id="opt3" name="plc" value="">
+                                                            <label for="opt3" class="radio-label" id="place3"></label>
+                                                        </div><br/>
+                                                        <div class="radio">
+                                                            <input type="radio" id="opt4" name="plc"  value="">
+                                                            <label for="opt4" class="radio-label" id="place4"></label>
+                                                        </div><br/>
+                                                        <div class="radio">
+                                                            <input type="radio" id="opt5" name="plc"  value="">
+                                                            <label for="opt5" class="radio-label" id="place5"></label>
+                                                        </div><br/>
+                                                        <div class="btn-cerrar">
+                                                            <label for="btn-modal" class="button-modal">close</label>
+                                                        </div>
+                                                        <input type="button" class="send-data" value="Send" id="send_data">
+                                                    </form>
+                                                </div>
+                                                <label for="btn-modal" class="close-modal"></label>
+                                            </div>
+                                        </div>
+                                        <h2>Weather</h2>
+                                        <div class="inputBox">
+                                            <textarea class="inputBox info" id="panel" cols="50" rows="20" readonly></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-img">
+                    <img src="images/animation/e1.png">
+                </div>
+            </div>
+            <div class="post reverse">
+                <div class="col">
+                    <h3>About the project</h3>
+                    <p>
+                        This NodeJS project is a simple web application that brings the weather report by consuming three differents API's,
+                        MapBox to obtain the place, latitude and longitude in order to provide the data for OpenWeatherMap and finally get
+                        the complete weather report that includes temperature, min temp, max temp, thermal sensation, and more. The third API
+                        is a simple NodeJS API that saves the search history in a MongoDB database.
+                    </p><br/>
+                    <p>The search history has a maximum storage of five values and it shows the last value searched as the first item in list with "1" ID.</p>
+                </div>
+                <div class="col">
+                    <img src="https://static1.squarespace.com/static/604f85f69c40974dfa6737a4/t/6064cc20029be73811f5d197/1617218620520/Ilustraci%C3%B3n_PartedeElVeinte.png?format=500w" alt="img1">
+                </div>
+            </div>
+        </div>
+
+    </main>
+<!--/Main Site-->
+
+<!--include footer-->
+    <%-include('include/_footer') %>
+<!--/include footer-->
