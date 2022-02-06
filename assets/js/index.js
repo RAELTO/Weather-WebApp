@@ -19,7 +19,7 @@ $("#open-modal").click(() => {
         {
             $('div.col-img img').attr({ src: `/images/animation/e${i}.png` });
             i++;
-            if(i === 6){
+            if(i === 5){
                 i=1;
                 $('div.col-img img').attr({ src: `/images/animation/e1.png` });
             }
