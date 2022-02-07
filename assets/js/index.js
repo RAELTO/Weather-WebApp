@@ -10,7 +10,7 @@ $("#clear").click(() => {
     window.location.reload();
 });
 
-$("#open-modal").click(() => {
+$("#open-modal").one( "click", () => {
 
     $(function(){
 
@@ -28,6 +28,6 @@ $("#open-modal").click(() => {
 
     });  
 
-})
+});
 
 
