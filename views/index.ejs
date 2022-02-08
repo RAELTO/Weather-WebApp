@@ -64,10 +64,17 @@
                                     <h2 class="panel-title">Main App</h2>
                                     <form id="search_data">
                                         <div class="inputBox">
-                                            <i class="fas fa-search"> Search:</i>
-                                            <input type="text" id="search_box" value="" placeholder="" autocomplete="off" required />
+                                            <!--<input type="text" id="search_box" value="" placeholder="" autocomplete="off" required />-->
+                                            <div class="sb-container">
+                                                <div class="search-box">
+                                                    <input type="text" id="search_box" value="" class="search" placeholder="What city are you looking for?" autocomplete="off" required />
+                                                    <button type="button" id="open-modal" class="search-btn">
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
                                             <div class="inputBox">
-                                                <input type="button" value="Search" id="open-modal">
+                                                <!--<input type="button" value="Search" id="open-modal">-->
                                                 <input type="button" value="Clear" id="clear">
                                             </div>
                                             <input type="checkbox" id="btn-modal">
@@ -97,7 +104,7 @@
                                                             <label for="opt5" class="radio-label" id="place5"></label>
                                                         </div><br/>
                                                         <div class="btn-cerrar">
-                                                            <label for="btn-modal" class="button-modal">close</label>
+                                                            <label for="btn-modal" class="button-modal">Cancel</label>
                                                         </div>
                                                         <input type="button" class="send-data" value="Send" id="send_data">
                                                     </form>

@@ -470,7 +470,7 @@ section{
     margin-top: 1.25rem;
 }
 
-.form .inputBox input, textarea{
+.form .inputBox textarea{
     width: 100%;
     background: rgba(255, 255, 255, 0.2);
     border: none;
@@ -491,8 +491,55 @@ section{
     resize: none;
 }
 
-.form .inputBox .search{
+/*.form .inputBox .search{
     cursor: auto;
+}*/
+
+/*.sb-container{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}*/
+
+.search-box{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.search{
+    width: 100%;
+    border: 3px solid #03a9f4;
+    border-right: none;
+    padding: 15px;
+    height: 20px;
+    outline: none;
+    color: #9dbfaf;
+    border-radius: 0.4375rem 0 0 0.4375rem;
+}
+
+.search:focus{
+    color: #000;
+    box-shadow: 0 0 10px #fff;
+}
+
+.search-btn{
+    width: 40px;
+    height: 36px;
+    border: 1px solid #03a9f4;
+    background: #03a9f4;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-btn:hover {
+    background: #0373f4;
+    border: 1px solid #0373f4;
 }
 
 .form .inputBox textarea{
@@ -506,11 +553,11 @@ section{
     margin-bottom: 0.3125rem;
 }*/
 
-.form .inputBox i{
+/*.form .inputBox i{
     float: left;
     margin-bottom: 0.3125rem;
     color: #03a9f4;
-}
+}*/
 
 .form .inputBox input::placeholder{
     color: #ccc;
@@ -527,13 +574,14 @@ section{
 }
 
 #clear{
-    padding: 0.4375rem 0.625rem;
+    padding: 0.625rem 0.9375rem;
     background: #fff;
     color: #666;
-    border-radius: 0.9375rem 0.3125rem;
+    border-radius: 0.9375rem;
     cursor: pointer;
     transition: all 300ms ease;
     font-weight: bold;
+    border: none;
 }
 
 #clear:hover{
@@ -552,6 +600,7 @@ section{
 /* --- MODAL WINDOW --- */
 
 .form .inputBox input[type="button"].send-data {
+    padding: 0.625rem 0.9375rem;
     background: #108505;
     color: #fff;
     max-width: 6.25rem;
@@ -559,12 +608,15 @@ section{
     font-weight: bold;
     text-align: center;
     transition: all 300ms ease;
+    border-radius: 0.9375rem;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
 }
 
 .form .inputBox input[type="button"].send-data:hover{
     background: #26d417;
     color: #fff;
-    cursor: pointer;
 }
 
 #btn-modal, #btn-modalH{
@@ -671,7 +723,7 @@ section{
 
 .content-modal .btn-cerrar label, .btn-cerrarH label{
     padding: 0.4375rem 0.625rem;
-    background-color: #08618a;
+    background-color: #f8624e;
     color: #fff;
     border-radius: 0.9375rem 0.3125rem;
     cursor: pointer;
@@ -680,7 +732,7 @@ section{
 }
 
 .content-modal .btn-cerrar label:hover, .btn-cerrarH label:hover{
-    background-color: #03a9f4;
+    background-color: #f5341b;
 }
 
 .close-modal{
